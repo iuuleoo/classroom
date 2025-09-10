@@ -1,34 +1,21 @@
-"use strict"
+const data = ["Leonardo", "leo@email.com"]
 
-function showMessage() {
-    let personName = "Leonardo"
+// Desestruturando array
+const [username, email] = data
+console.log("Nome:", username)
+console.log("Email:", email)
 
-    console.log("Olá", personName)
-}
+const fruits = ["Banana", "Apple", "Orange"]
 
-showMessage()
-
-class Student {
-    get point(){
-        return 7
-    }
-}
-
-let student = new Student()
-//student.point = 10
-
-console.log(student.point)
+// Desestruturar somente o primeiro.
+const [banana] = fruits
+console.log(banana)
 
 
-// Tenta deletar uma propriedade de um obejeto que não posso deletar.
-//delete window.document
+// ignorando o primeiro na desestruturação.
+const [, apple] = fruits
+console.log(apple)
 
-
-// Quando passamos parâmetros duplicados
-/*function sum(a, a, c) {
-   return a + a + c
-}
-
-const result = sum(1,3,2)
-console.log("RESULTADO:", result)
-*/
+// Ignorando o primeiro e o segundo na desestruturação.
+const [,,orange] = fruits
+console.log(orange)
