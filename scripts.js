@@ -1,21 +1,16 @@
-const data = ["Leonardo", "leo@email.com"]
+const product = {
+    description: "Teclado",
+    price: 150
+}
 
-// Desestruturando array
-const [username, email] = data
-console.log("Nome:", username)
-console.log("Email:", email)
+const { description, price} = product
+console.log("Descrição:", description)
+console.log("Preço: R$", price)
 
-const fruits = ["Banana", "Apple", "Orange"]
+function newProduct({description, price}) {
+    console.log("## NOVO PRODUTO ###")
+   console.log("Descrição:", description)
+   console.log("Preço:", price)
+}
 
-// Desestruturar somente o primeiro.
-const [banana] = fruits
-console.log(banana)
-
-
-// ignorando o primeiro na desestruturação.
-const [, apple] = fruits
-console.log(apple)
-
-// Ignorando o primeiro e o segundo na desestruturação.
-const [,,orange] = fruits
-console.log(orange)
+newProduct({ description: "Mouse", price: 70})
